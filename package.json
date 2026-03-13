@@ -1,0 +1,32 @@
+{
+  "name": "memoni",
+  "version": "0.0.0",
+  "description": "Hello GUI EXE with Electron",
+  "main": "main.js",
+  "author": "Goeun",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.goeun.memoni",
+    "productName": "Memoni",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**",
+      "assets/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
